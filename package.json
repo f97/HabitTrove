@@ -9,6 +9,7 @@
     "lint": "next lint",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
+    "postinstall": "npm config set legacy-peer-deps true",
     "docker-build": "docker build -t habittrove .",
     "docker-run": "docker run -p 3000:3000 -v $(pwd)/data:/app/data habittrove",
     "prepare": "husky",
