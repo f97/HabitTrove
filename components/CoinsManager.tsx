@@ -319,7 +319,7 @@ export default function CoinsManager() {
                           className={`flex justify-between items-center p-3 border rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${isHighlighted ? 'ring-2 ring-blue-500 bg-blue-50 dark:bg-blue-900/30' : '' // Apply highlight styles
                             }`}
                         >
-                          <div className="space-y-1 flex-grow mr-4"> {/* Added flex-grow and margin */}
+                          <div className="space-y-1 grow mr-4"> {/* Added grow and margin */}
                             <div className="flex items-center gap-2 flex-wrap"> {/* Added flex-wrap */}
                               {transaction.relatedItemId ? (
                                 <Link
@@ -360,7 +360,7 @@ export default function CoinsManager() {
                               onDelete={handleDeleteNote}
                             />
                           </div>
-                          <div className="flex-shrink-0 text-right"> {/* Ensure amount stays on the right */}
+                          <div className="shrink-0 text-right"> {/* Ensure amount stays on the right */}
                             <span
                               className={`font-mono ${transaction.amount >= 0
                                 ? 'text-green-600 dark:text-green-400'

@@ -9,7 +9,7 @@ interface RefreshBannerProps {
 
 export default function RefreshBanner({ onRefresh }: RefreshBannerProps) {
   return (
-    <div className="fixed bottom-4 right-4 z-[100] bg-yellow-400 dark:bg-yellow-500 text-black dark:text-gray-900 p-4 rounded-lg shadow-lg flex items-center gap-3">
+    <div className="fixed bottom-4 right-4 z-100 bg-yellow-400 dark:bg-yellow-500 text-black dark:text-gray-900 p-4 rounded-lg shadow-lg flex items-center gap-3">
       <AlertTriangle className="h-6 w-6 text-yellow-800 dark:text-yellow-900" />
       <div>
         <p className="font-semibold">Data out of sync</p>

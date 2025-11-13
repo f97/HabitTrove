@@ -319,7 +319,7 @@ export default function AddEditHabitModal({ onClose, onSave, habit, isTask }: Ad
                       {drawing ? t('editDrawing') : t('addDrawing')}
                     </Button>
                     {drawing && (
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <DrawingDisplay
                           drawingData={drawing}
                           width={80}

@@ -45,7 +45,7 @@ export default function HabitStreak({ habits }: HabitStreakProps) {
         <CardTitle>{t('dailyCompletionStreakTitle')}</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="w-full aspect-[2/1]">
+        <div className="w-full aspect-2/1">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={completions}

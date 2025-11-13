@@ -77,7 +77,7 @@ export function PermissionSelector({
                   <div className="font-medium capitalize text-sm border-b pb-2">{permissionLabels[resource]}</div>
                   <div className="flex flex-col gap-2.5">
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-                    <Label htmlFor={`${resource}-write`} className="text-xs text-muted-foreground break-words">{t('permissionWrite')}</Label>
+                    <Label htmlFor={`${resource}-write`} className="text-xs text-muted-foreground wrap-break-word">{t('permissionWrite')}</Label>
                       <Switch
                         id={`${resource}-write`}
                         className="h-4 w-7"
@@ -88,7 +88,7 @@ export function PermissionSelector({
                       />
                     </div>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-                    <Label htmlFor={`${resource}-interact`} className="text-xs text-muted-foreground break-words">{t('permissionInteract')}</Label>
+                    <Label htmlFor={`${resource}-interact`} className="text-xs text-muted-foreground wrap-break-word">{t('permissionInteract')}</Label>
                       <Switch
                         id={`${resource}-interact`}
                         className="h-4 w-7"

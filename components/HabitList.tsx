@@ -144,7 +144,7 @@ export default function HabitList() {
 
       {/* Search and Sort Controls */}
       <div className="flex flex-col sm:flex-row items-center gap-4 my-4">
-        <div className="relative flex-grow w-full sm:w-auto">
+        <div className="relative grow w-full sm:w-auto">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <Search className="h-5 w-5 text-muted-foreground" />
           </div>
@@ -206,9 +206,9 @@ export default function HabitList() {
         {archivedHabits.length > 0 && (
           <>
             <div className="col-span-1 sm:col-span-2 relative flex items-center my-6">
-              <div className="flex-grow border-t border-gray-300 dark:border-gray-600" />
+              <div className="grow border-t border-gray-300 dark:border-gray-600" />
               <span className="mx-4 text-sm text-gray-500 dark:text-gray-400">{t('archivedSectionTitle')}</span>
-              <div className="flex-grow border-t border-gray-300 dark:border-gray-600" />
+              <div className="grow border-t border-gray-300 dark:border-gray-600" />
             </div>
             {archivedHabits.map((habit: Habit) => (
               <HabitItem

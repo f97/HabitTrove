@@ -33,7 +33,7 @@ const renderUserAvatars = (item: WishlistItemType, currentUser: User | null, use
   if (!item.userIds || item.userIds.length <= 1) return null;
 
   return (
-    <div className="flex -space-x-2 ml-2 flex-shrink-0">
+    <div className="flex -space-x-2 ml-2 shrink-0">
       {item.userIds?.filter((u) => u !== currentUser?.id).map(userId => {
         const user = usersData.users.find(u => u.id === userId)
         if (!user) return null
@@ -70,17 +70,17 @@ export default function WishlistItem({
     <Card
       id={`wishlist-${item.id}`}
       className={`h-full flex flex-col transition-all duration-500 ${isHighlighted ? 'bg-yellow-100 dark:bg-yellow-900' : ''
-        } ${isRecentlyRedeemed ? 'animate-[celebrate_1s_ease-in-out] shadow-lg ring-2 ring-primary' : ''
+        } ${isRecentlyRedeemed ? 'animate-celebrate shadow-lg ring-2 ring-primary' : ''
         } ${item.archived ? 'opacity-75' : ''}`}
     >
-      <CardHeader className="flex-shrink-0">
+      <CardHeader className="shrink-0">
         <div className="flex justify-between items-start">
           <div className="flex items-center gap-2 flex-1 min-w-0">
             <CardTitle className={`line-clamp-1 ${item.archived ? 'text-gray-400 dark:text-gray-500' : ''}`}>
               {item.name}
             </CardTitle>
             {item.targetCompletions && (
-              <span className="text-sm text-gray-500 dark:text-gray-400 flex-shrink-0">
+              <span className="text-sm text-gray-500 dark:text-gray-400 shrink-0">
                 ({item.targetCompletions === 1 ? t('usesLeftSingular') : t('usesLeftPlural', { count: item.targetCompletions })})
               </span>
             )}
@@ -90,12 +90,12 @@ export default function WishlistItem({
         {(item.description || item.drawing) && (
           <div className={`flex gap-4 mt-2 ${!item.description ? 'justify-end' : ''}`}>
             {item.description && (
-              <CardDescription className={`whitespace-pre-line flex-1 min-w-0 break-words ${item.archived ? 'text-gray-400 dark:text-gray-500' : ''}`}>
+              <CardDescription className={`whitespace-pre-line flex-1 min-w-0 wrap-break-word ${item.archived ? 'text-gray-400 dark:text-gray-500' : ''}`}>
                 {item.description}
               </CardDescription>
             )}
             {item.drawing && (
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <DrawingDisplay 
                   drawingData={item.drawing} 
                   width={120} 
@@ -107,7 +107,7 @@ export default function WishlistItem({
           </div>
         )}
       </CardHeader>
-      <CardContent className="flex-grow flex flex-col justify-end">
+      <CardContent className="grow flex flex-col justify-end">
         <div className="mt-auto">
           <div className="flex items-center gap-2">
             <Coins className={`h-4 w-4 ${item.archived ? 'text-gray-400 dark:text-gray-500' : 'text-yellow-400'}`} />
@@ -117,7 +117,7 @@ export default function WishlistItem({
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex-shrink-0 flex justify-between gap-2">
+      <CardFooter className="shrink-0 flex justify-between gap-2">
         <div className="flex gap-2">
           <Button
             variant={canRedeem ? "default" : "secondary"}

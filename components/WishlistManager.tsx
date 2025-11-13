@@ -130,9 +130,9 @@ export default function WishlistManager() {
         {archivedItems.length > 0 && (
           <>
             <div className="col-span-1 lg:col-span-2 relative flex items-center my-6">
-              <div className="flex-grow border-t border-gray-300 dark:border-gray-600" />
+              <div className="grow border-t border-gray-300 dark:border-gray-600" />
               <span className="mx-4 text-sm text-gray-500 dark:text-gray-400">{t('archivedSectionTitle')}</span>
-              <div className="flex-grow border-t border-gray-300 dark:border-gray-600" />
+              <div className="grow border-t border-gray-300 dark:border-gray-600" />
             </div>
             {archivedItems.map((item) => (
               <WishlistItem

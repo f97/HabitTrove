@@ -301,7 +301,7 @@ export default function AddEditWishlistItemModal({
                       {drawing ? t('editDrawing') : t('addDrawing')}
                     </Button>
                     {drawing && (
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <DrawingDisplay
                           drawingData={drawing}
                           width={80}

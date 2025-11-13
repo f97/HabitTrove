@@ -28,7 +28,7 @@ export const NotificationBadge = ({
             'absolute rounded-full -top-1.5 -right-1.5 z-20 border h-4 w-4 p-0 flex items-center justify-center text-xs',
             typeof label !== 'undefined' && ('' + label).length === 0
               ? ''
-              : 'min-w-[1rem]',
+              : 'min-w-4',
             className
           )}
           {...props}

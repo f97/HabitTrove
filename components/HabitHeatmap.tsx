@@ -45,7 +45,7 @@ export default function HabitHeatmap({ habits }: HabitHeatmapProps) {
   const startDate = now.minus({ days: 30 }).toJSDate()
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow">
+    <div className="p-4 bg-white rounded-lg shadow-sm">
       <h2 className="text-lg font-semibold mb-4">Habit Completion Heatmap</h2>
       <div className="overflow-x-auto">
         <HeatMap

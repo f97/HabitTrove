@@ -185,7 +185,7 @@ const ItemSection = ({
                   <ContextMenu>
                     <ContextMenuTrigger asChild>
                       <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0">
-                        <div className="flex-shrink-0">
+                        <div className="shrink-0">
                           <button
                             onClick={(e) => {
                               e.preventDefault();
@@ -237,7 +237,7 @@ const ItemSection = ({
                                 <Tooltip delayDuration={0}>
                                   <TooltipTrigger asChild>
                                     {/* The AlertTriangle itself doesn't need hover styles if the parent Link handles it */}
-                                    <AlertTriangle className="h-4 w-4 flex-shrink-0 text-red-600 dark:text-red-500" />
+                                    <AlertTriangle className="h-4 w-4 shrink-0 text-red-600 dark:text-red-500" />
                                   </TooltipTrigger>
                                   <TooltipContent>
                                     <p>{t('overdueTooltip')}</p>
@@ -277,7 +277,7 @@ const ItemSection = ({
                     </ContextMenuContent>
                   </ContextMenu>
                 </span>
-                <span className="flex items-center gap-2 text-xs text-muted-foreground flex-shrink-0">
+                <span className="flex items-center gap-2 text-xs text-muted-foreground shrink-0">
                   {habit.targetCompletions && (
                     <span className="bg-secondary px-1.5 py-0.5 rounded-full">
                       {completionsToday}/{target}
