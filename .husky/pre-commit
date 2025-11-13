@@ -8,4 +8,9 @@ if ! grep -q "## Version $VERSION" CHANGELOG.md; then
 fi
 echo "✅ Version $VERSION found in CHANGELOG.md"
 
+# Add bun to PATH if it exists
+if [ -d "$HOME/.bun/bin" ]; then
+  export PATH="$HOME/.bun/bin:$PATH"
+fi
+
 npm run typecheck && npm run lint && npm run test
